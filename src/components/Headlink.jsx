@@ -29,7 +29,7 @@ const Headlink = ({ image, head, description, time, count, isUnread }) => {
         </div>
 
         <div className="activity">
-          <div className="time">{timeDifference(new Date(time))}</div>
+          <div className="time">{timeDifference(new Date())}</div>
           {isUnread && <div className="count">{count}</div>}
         </div>
       </div>

@@ -1,0 +1,29 @@
+.chat-area {
+}
+
+.chat-area-head {
+  @apply w-full shadow-md flex items-center justify-between px-2;
+}
+
+.chat-area-head-back {
+  @apply h-full;
+}
+
+.chat-area-head-image {
+  @apply w-8 h-8 rounded-full overflow-hidden bg-cover bg-center m-2;
+}
+
+.chat-area-head-menu {
+}
+
+.chat-area-head-box {
+  @apply flex-1;
+}
+
+.chat-area-head-name {
+  @apply text-base font-medium;
+}
+
+.chat-area-head-status {
+  @apply text-xs;
+}
