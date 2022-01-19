@@ -1,18 +1,28 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import './styles/Headlink.css';
 
-const Headlinks = ({ image, head, description, time, count, isUnread }) => {
+const Headlink = ({ image, head, description, time, count, isUnread }) => {
   return (
-    <div>
-      <div className="image">
-        <img src={image} alt="head" />
-      </div>
+    <div className="headlink">
+      <div
+        className="image"
+        style={{
+          backgroundImage: `url(${image})`,
+        }}
+      ></div>
+
       <div className="head">
         <div className="head-title">
           <h3>{head}</h3>
-          <p>{description}</p>
         </div>
+        {isUnread ? (
+          <p className="description-unread">{description}</p>
+        ) : (
+          <p className="description-read">{description}</p>
+        )}
       </div>
+
       <div className="time"></div>
       <div className="count"></div>
       <div className="isUnread"></div>
@@ -20,7 +30,7 @@ const Headlinks = ({ image, head, description, time, count, isUnread }) => {
   );
 };
 
-Headlinks.propTypes = {
+Headlink.propTypes = {
   image: propTypes.string,
   head: propTypes.string.isRequired,
   description: propTypes.string,
@@ -29,4 +39,4 @@ Headlinks.propTypes = {
   isUnread: propTypes.bool,
 };
 
-export default Headlinks;
+export default Headlink;

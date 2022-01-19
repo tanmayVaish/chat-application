@@ -1,0 +1,18 @@
+.image {
+  @apply w-12 h-12 rounded-full overflow-hidden bg-cover bg-center mr-2;
+}
+.headlink {
+  @apply flex items-center border-b border-grey p-2;
+}
+
+.head-title {
+  @apply text-lg font-medium text-black;
+}
+
+.description-unread {
+  @apply font-normal text-grey;
+}
+
+.description-read {
+  @apply font-normal;
+}
