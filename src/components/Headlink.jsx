@@ -1,6 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import './styles/Headlink.css';
+import timeDifference from '../utils/timeDifference';
 
 const Headlink = ({ image, head, description, time, count, isUnread }) => {
   return (
@@ -12,20 +13,26 @@ const Headlink = ({ image, head, description, time, count, isUnread }) => {
         }}
       ></div>
 
-      <div className="head">
-        <div className="head-title">
-          <h3>{head}</h3>
-        </div>
-        {isUnread ? (
-          <p className="description-unread">{description}</p>
-        ) : (
-          <p className="description-read">{description}</p>
-        )}
-      </div>
+      <div className="box">
+        <div className="head">
+          <div className="head-title">
+            <div>{head}</div>
+          </div>
 
-      <div className="time"></div>
-      <div className="count"></div>
-      <div className="isUnread"></div>
+          <div className="head-description">
+            {!isUnread ? (
+              <div className="description-unread">{description}</div>
+            ) : (
+              <div className="description-read">{description}</div>
+            )}
+          </div>
+        </div>
+
+        <div className="activity">
+          <div className="time">{timeDifference(new Date(time))}</div>
+          {isUnread && <div className="count">{count}</div>}
+        </div>
+      </div>
     </div>
   );
 };

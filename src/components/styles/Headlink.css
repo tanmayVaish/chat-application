@@ -1,12 +1,29 @@
+.headlink {
+  @apply flex border-b border-whitesmoke p-2;
+}
+
 .image {
   @apply w-12 h-12 rounded-full overflow-hidden bg-cover bg-center mr-2;
 }
-.headlink {
-  @apply flex items-center border-b border-grey p-2;
+
+.box {
+  @apply flex flex-1 items-center justify-center;
+}
+
+.head {
+  @apply grow flex-col items-start mr-auto;
 }
 
 .head-title {
   @apply text-lg font-medium text-black;
+}
+
+.head-description {
+  @apply text-left;
+}
+
+.activity {
+  @apply flex flex-col items-stretch mb-auto h-full justify-between;
 }
 
 .description-unread {
@@ -15,4 +32,12 @@
 
 .description-read {
   @apply font-normal;
+}
+
+.time {
+  @apply text-xs text-grey;
+}
+
+.count {
+  @apply bg-orange text-white text-xs flex items-center justify-center w-5 h-5 rounded-full self-end;
 }
