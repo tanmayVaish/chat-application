@@ -54,16 +54,64 @@ function App() {
     isOnline: true,
     messages: [
       {
-        message: 'gaand marao',
-        time: '2022-01-19T19:16:45.278Z',
-        priority: 0,
+        message: 'Hi',
+        timestamp: '2022-01-19T19:16:45.278Z',
         sentByMe: false,
       },
       {
-        message: 'gaand marao',
-        time: '2022-01-19T19:16:45.278Z',
-        priority: 0,
+        message: 'Hello',
+        timestamp: '2022-01-19T19:16:45.278Z',
+        sentByMe: true,
+      },
+      {
+        message: 'How are you?',
+        timestamp: '2022-01-19T19:16:45.278Z',
         sentByMe: false,
+      },
+      {
+        message: 'I am a Goblin',
+        timestamp: '2022-01-19T19:16:45.278Z',
+        sentByMe: true,
+      },
+      {
+        message: 'Hi',
+        timestamp: '2022-01-19T19:16:45.278Z',
+        sentByMe: false,
+      },
+      {
+        message: 'Hello',
+        timestamp: '2022-01-19T19:16:45.278Z',
+        sentByMe: true,
+      },
+      {
+        message: 'How are you?',
+        timestamp: '2022-01-19T19:16:45.278Z',
+        sentByMe: false,
+      },
+      {
+        message: 'I am a Goblin',
+        timestamp: '2022-01-19T19:16:45.278Z',
+        sentByMe: true,
+      },
+      {
+        message: 'Hi',
+        timestamp: '2022-01-19T19:16:45.278Z',
+        sentByMe: false,
+      },
+      {
+        message: 'Hello',
+        timestamp: '2022-01-19T19:16:45.278Z',
+        sentByMe: true,
+      },
+      {
+        message: 'How are you?',
+        timestamp: '2022-01-19T19:16:45.278Z',
+        sentByMe: false,
+      },
+      {
+        message: 'I am a Goblin',
+        timestamp: '2022-01-19T19:16:45.278Z',
+        sentByMe: true,
       },
     ],
   };

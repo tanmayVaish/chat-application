@@ -1,23 +1,45 @@
 .chat-area {
+  height: 90%;
+}
+
+.chat-area-body {
+  @apply grow overflow-y-scroll w-full flex flex-col;
+  height: 80%;
 }
 
 .chat-area-head {
   @apply w-full shadow-md flex items-center justify-between px-2;
+  height: 10%;
 }
 
 .chat-area-head-back {
-  @apply h-full;
+  @apply h-full flex items-center justify-start;
 }
 
 .chat-area-head-image {
-  @apply w-8 h-8 rounded-full overflow-hidden bg-cover bg-center m-2;
+  @apply w-10 h-10 rounded-full bg-cover bg-center m-2 relative;
+}
+
+.chat-area-head-indicator {
+  @apply absolute bottom-0 right-0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.chat-area-head-indicator-online {
+  @apply bg-green;
+}
+
+.chat-area-head-indicator-offline {
+  @apply bg-red;
 }
 
 .chat-area-head-menu {
+  @apply ml-2 h-full flex items-center justify-end;
 }
 
 .chat-area-head-box {
-  @apply flex-1;
+  @apply grow;
 }
 
 .chat-area-head-name {
@@ -26,4 +48,24 @@
 
 .chat-area-head-status {
   @apply text-xs;
+}
+
+.chat-area-footer-box {
+  @apply w-full flex items-center;
+}
+
+.chat-area-footer-input {
+  @apply flex grow border rounded-xl ml-2;
+}
+
+.chat-area-footer-input input {
+  @apply grow outline-none p-1 m-1;
+}
+
+.chat-area-footer-input img {
+  @apply p-2;
+}
+
+.chat-area-footer-send {
+  @apply p-2;
 }

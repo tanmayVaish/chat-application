@@ -1,0 +1,11 @@
+.message {
+  @apply bg-grey2 m-2 p-2 rounded-tr-xl rounded-bl-xl w-1/2 shadow-md;
+}
+
+.message_timestamp {
+  @apply text-xs text-grey3 text-right;
+}
+
+.message.sent {
+  @apply bg-blue self-end;
+}

@@ -1,3 +1,7 @@
+.App {
+  @apply h-screen w-screen flex flex-col;
+}
 .nav {
   @apply bg-accent w-full p-3 text-lg text-white flex items-center justify-center font-poppins;
+  height: 10%;
 }
