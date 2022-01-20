@@ -1,13 +1,37 @@
 .App {
-  @apply h-screen w-screen flex;
+  @apply h-screen w-screen flex w-full;
 }
 
 .appHead-g1 {
-  @apply flex flex-row items-center h-fit p-10 w-2/6 justify-between;
+  @apply flex flex-col w-4/12 p-10;
+}
+
+.appHead-g1-top {
+  @apply flex flex-row w-auto items-center justify-between;
+}
+
+.appHead-g1-mid {
+  @apply mt-20 mb-2 p-2 border rounded-xl flex items-center justify-center;
+}
+
+.appHead-g1-mid input {
+  @apply w-full;
+}
+
+.appHead-g1-bottom {
+  @apply h-full;
 }
 
 .appHead-g2 {
-  @apply flex justify-end items-center h-fit p-8 grow;
+  @apply flex flex-col w-8/12 p-10;
+}
+
+.appHead-g2-top {
+  @apply flex items-center justify-end w-full;
+}
+
+.appHead-g2-bottom {
+  @apply h-full border rounded-xl border-grey2 m-2 mt-12;
 }
 
 .nav {
@@ -16,11 +40,11 @@
 }
 
 .headTitle {
-  @apply text-4xl text-black font-semibold h-fit w-fit;
+  @apply text-4xl text-black font-semibold;
 }
 
 .headSort {
-  @apply h-fit w-fit flex items-center justify-center text-2xl text-black;
+  @apply flex items-center justify-center text-2xl text-black;
 }
 
 .headSortIcon {
@@ -28,7 +52,7 @@
 }
 
 .headAccount {
-  @apply flex items-center justify-center h-fit w-fit ml-32;
+  @apply flex items-center justify-center h-fit w-fit ml-10;
 }
 
 .headBellIcon {
@@ -36,7 +60,7 @@
 }
 
 .headAccountName {
-  @apply ml-2 mr-6 text-3xl;
+  @apply mr-6 text-3xl;
 }
 
 .headAccountImage {

@@ -5,6 +5,7 @@ import Headlink from './components/Headlink';
 import ChatArea from './components/ChatArea';
 import SideNav from './components/SideNav';
 import DownIcon from './assets/down.svg';
+import SearchIcon from './assets/search.svg';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSlidersH, faBell } from '@fortawesome/free-solid-svg-icons';
@@ -124,28 +125,55 @@ function App() {
       <SideNav></SideNav>
 
       <div className="appHead-g1">
-        <div className="headTitle">Chats</div>
-        <div className="headSort">
-          <div className="headSortIcon">
-            <FontAwesomeIcon icon={faSlidersH} />
+        <div className="appHead-g1-top">
+          <div className="headTitle">Chats</div>
+          <div className="headSort">
+            <div className="headSortIcon">
+              <FontAwesomeIcon icon={faSlidersH} />
+            </div>
+            <div className="headSortContent">Sort</div>
           </div>
-          <div className="headSortContent">Sort</div>
+        </div>
+        <div className="appHead-g1-mid">
+          <img src={SearchIcon} alt="search" />
+          <input type="text" placeholder="Search" />
+        </div>
+        <div className="appHead-g1-bottom">
+          <div className="headlinks">
+            {chats.map((chat) => (
+              <Headlink
+                key={chat.name}
+                name={chat.name}
+                image={chat.image}
+                description={chat.description}
+                isOnline={chat.isOnline}
+                time={chat.time}
+                count={chat.count}
+                isUnread={chat.isUnread}
+              />
+            ))}
+          </div>
         </div>
       </div>
       <div className="appHead-g2">
-        <div className="headBellIcon">
-          <FontAwesomeIcon icon={faBell} />
-        </div>
+        <div className="appHead-g2-top">
+          <div className="headBellIcon">
+            <FontAwesomeIcon icon={faBell} />
+          </div>
 
-        <div className="headAccount">
-          <div
-            className="headAccountImage"
-            style={{
-              backgroundImage: "url('https://picsum.photos/id/1/200/200')",
-            }}
-          />
-          <div className="headAccountName">Tanmay</div>
-          <img src={DownIcon} alt="down" />
+          <div className="headAccount">
+            <div
+              className="headAccountImage"
+              style={{
+                backgroundImage: "url('https://picsum.photos/id/1/200/200')",
+              }}
+            />
+            <div className="headAccountName">Tanmay</div>
+            <img src={DownIcon} alt="down" />
+          </div>
+        </div>
+        <div className="appHead-g2-bottom">
+          <ChatArea chats={chats[0]} />
         </div>
       </div>
       {/* <div className="nav">Messages</div> */}
@@ -165,7 +193,6 @@ function App() {
           ))}
         </div>
       </div> */}
-      {/* <ChatArea chats={chats[0]} /> */}
     </div>
   );
 }
