@@ -1,7 +1,32 @@
 .App {
-  @apply h-screen w-screen flex flex-col;
+  @apply h-screen w-screen flex;
 }
+
+.appHead {
+  @apply w-full h-fit flex flex-row m-11 items-center;
+}
+
 .nav {
   @apply bg-accent w-full p-3 text-lg text-white flex items-center justify-center font-poppins;
   height: 10%;
+}
+
+.headTitle {
+  @apply text-4xl text-black font-semibold h-fit w-fit;
+}
+
+.headSort {
+  @apply h-fit w-fit flex items-center justify-center;
+}
+
+.headSortIcon {
+  @apply rounded-lg bg-grey2 p-1 px-2;
+}
+
+.headAccount {
+  @apply flex items-center justify-center h-fit w-fit;
+}
+
+.headAccountImage {
+  @apply w-10 h-10 rounded-full bg-cover bg-center m-2 relative;
 }

@@ -5,6 +5,9 @@ import Headlink from './components/Headlink';
 import ChatArea from './components/ChatArea';
 import SideNav from './components/SideNav';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSlidersH, faBell } from '@fortawesome/free-solid-svg-icons';
+
 function App() {
   // const [chats, setChats] = useState([
   //   {
@@ -117,6 +120,28 @@ function App() {
 
   return (
     <div className="App">
+      <SideNav></SideNav>
+      <div className="appHead">
+        <div className="headTitle">Chats</div>
+        <div className="headSort">
+          <div className="headSortIcon">
+            <FontAwesomeIcon icon={faSlidersH} />
+          </div>
+          <div className="">Sort</div>
+        </div>
+        <div className="headBellIcon">
+          <FontAwesomeIcon icon={faBell} />
+        </div>
+        <div className="headAccount">
+          <div
+            className="headAccountImage"
+            style={{
+              backgroundImage: "url('https://picsum.photos/id/1/200/200')",
+            }}
+          />
+          <div className="headAccountName">Tanmay</div>
+        </div>
+      </div>
       {/* <div className="nav">Messages</div> */}
       {/* <div className="content">
         <div className="headlinks">
@@ -135,7 +160,6 @@ function App() {
         </div>
       </div> */}
       {/* <ChatArea chats={chats[0]} /> */}
-      <SideNav></SideNav>
     </div>
   );
 }
