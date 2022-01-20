@@ -10,12 +10,18 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 import Attach from '../assets/attach.svg';
 import Send from '../assets/send.svg';
+import Cross from '../assets/cross.svg';
 
-const ChatArea = ({ chats }) => {
+const ChatArea = ({ chats, setActiveChat }) => {
   return (
     <div className="chat-area">
       <div className="chat-area-head">
-        <div className="chat-area-head-back">
+        <div
+          className="chat-area-head-back"
+          onClick={() => {
+            setActiveChat(null);
+          }}
+        >
           <FontAwesomeIcon icon={faArrowLeft} />
         </div>
         <div className="grow flex items-center justify-evenly">
@@ -42,6 +48,7 @@ const ChatArea = ({ chats }) => {
         </div>
         <div className="chat-area-head-menu">
           <FontAwesomeIcon icon={faEllipsisV} />
+          <img src={Cross} alt="cross" />
         </div>
       </div>
       <div className="chat-area-body">
@@ -71,6 +78,7 @@ const ChatArea = ({ chats }) => {
 
 ChatArea.propTypes = {
   chats: propTypes.object.isRequired,
+  setActiveChat: propTypes.func.isRequired,
 };
 
 export default ChatArea;

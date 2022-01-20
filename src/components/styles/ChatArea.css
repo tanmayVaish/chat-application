@@ -1,5 +1,5 @@
 .chat-area {
-  height: 90%;
+  @apply h-screen;
 }
 
 .chat-area-body {

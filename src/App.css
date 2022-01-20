@@ -1,5 +1,48 @@
 .App {
-  @apply h-screen w-screen flex w-full;
+}
+
+.desktopVersion {
+  @apply w-full hidden flex-row;
+  @apply sm:flex;
+}
+
+/* desktop version */
+
+.desktopVersion .chat-area {
+  @apply h-full rounded-2xl overflow-hidden;
+}
+
+.desktopVersion .chat-area .chat-area-head {
+  @apply bg-accent text-white;
+}
+
+.desktopVersion .chat-area-head-back {
+  @apply hidden;
+}
+
+.desktopVersion .chat-area-head-menu {
+  @apply flex gap-12 mr-8;
+}
+
+/* desktop version */
+
+/* mobile version */
+
+.mobileVersion {
+  @apply w-full flex flex-col;
+  @apply sm:hidden;
+}
+
+/* mobile version */
+
+/* all version */
+
+.messages {
+  @apply h-screen flex w-full flex-col;
+}
+
+.chats {
+  /* @apply flex; */
 }
 
 .appHead-g1 {
@@ -15,7 +58,7 @@
 }
 
 .appHead-g1-mid input {
-  @apply w-full;
+  @apply w-full outline-none;
 }
 
 .appHead-g1-bottom {
@@ -32,6 +75,10 @@
 
 .appHead-g2-bottom {
   @apply h-full border rounded-xl border-grey2 m-2 mt-12;
+}
+
+.messages .appHead-g2-bottom {
+  @apply h-full border rounded-xl border-grey2 !important;
 }
 
 .nav {

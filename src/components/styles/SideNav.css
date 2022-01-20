@@ -1,5 +1,6 @@
 .side-nav {
   @apply bg-accent h-screen w-36 flex flex-col items-center p-10 rounded-r-2xl;
+  /* media queries */
 }
 
 .side-nav-g1,
