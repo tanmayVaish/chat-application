@@ -1,5 +1,5 @@
 .headlink {
-  @apply flex border-b border-whitesmoke p-2;
+  @apply flex border-b border-whitesmoke p-2 cursor-pointer;
 }
 
 .image {
@@ -20,6 +20,11 @@
 
 .head-description {
   @apply text-left;
+  /* overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  width: 100px; */
 }
 
 .activity {

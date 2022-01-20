@@ -15,7 +15,8 @@ function App() {
     {
       name: 'Goblin',
       image: 'https://picsum.photos/id/4/200/200',
-      description: 'Description 4',
+      description:
+        'I though, you left the company cause they were treating you badly, I though, you left the company cause they were treating you badly I though, you left the company cause they were treating you badly you left the company cause they were treating you badly',
       isOnline: true,
       time: new Date(
         Date.now() - Math.floor(1000 * 60 * 60 * 2 * Math.random())
@@ -39,7 +40,8 @@ function App() {
           sentByMe: false,
         },
         {
-          message: 'I am a Goblin',
+          message:
+            'you left the company cause they were treating you badlyyou left the company cause they were treating you badlyyou left the company cause they were treating you badlyyou left the company cause they were treating you badlyyou left the company cause they were treating you badlyyou left the company cause they were treating you badlyyou left the company cause they were treating you badlyyou left the company cause they were treating you badlyyou left the company cause they were treating you badlyyou left the company cause they were treating you badlyyou left the company cause they were treating you badlyyou left the company cause they were treating you badlyyou left the company cause they were treating you badly',
           timestamp: '2022-01-19T19:16:45.278Z',
           sentByMe: true,
         },
@@ -92,6 +94,12 @@ function App() {
     ]);
   };
 
+  chats.forEach((chat) => {
+    if (chat.description.length > 20) {
+      chat.description = chat.description.substring(0, 20) + '...';
+    }
+  });
+
   return (
     <div className="App">
       <div className="desktopVersion">
@@ -122,6 +130,7 @@ function App() {
                   time={chat.time}
                   count={chat.count}
                   isUnread={chat.isUnread}
+                  handleChatClick={handleChatClick}
                 />
               ))}
             </div>
@@ -145,7 +154,9 @@ function App() {
             </div>
           </div>
           <div className="appHead-g2-bottom">
-            <ChatArea chats={chats[0]} />
+            {activeChat && (
+              <ChatArea chats={activeChat} setActiveChat={setActiveChat} />
+            )}
           </div>
         </div>
       </div>
