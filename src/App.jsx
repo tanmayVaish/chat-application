@@ -4,6 +4,7 @@ import './App.css';
 import Headlink from './components/Headlink';
 import ChatArea from './components/ChatArea';
 import SideNav from './components/SideNav';
+import DownIcon from './assets/down.svg';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSlidersH, faBell } from '@fortawesome/free-solid-svg-icons';
@@ -121,17 +122,21 @@ function App() {
   return (
     <div className="App">
       <SideNav></SideNav>
-      <div className="appHead">
+
+      <div className="appHead-g1">
         <div className="headTitle">Chats</div>
         <div className="headSort">
           <div className="headSortIcon">
             <FontAwesomeIcon icon={faSlidersH} />
           </div>
-          <div className="">Sort</div>
+          <div className="headSortContent">Sort</div>
         </div>
+      </div>
+      <div className="appHead-g2">
         <div className="headBellIcon">
           <FontAwesomeIcon icon={faBell} />
         </div>
+
         <div className="headAccount">
           <div
             className="headAccountImage"
@@ -140,6 +145,7 @@ function App() {
             }}
           />
           <div className="headAccountName">Tanmay</div>
+          <img src={DownIcon} alt="down" />
         </div>
       </div>
       {/* <div className="nav">Messages</div> */}

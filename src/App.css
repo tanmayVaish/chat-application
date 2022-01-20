@@ -2,8 +2,12 @@
   @apply h-screen w-screen flex;
 }
 
-.appHead {
-  @apply w-full h-fit flex flex-row m-11 items-center;
+.appHead-g1 {
+  @apply flex flex-row items-center h-fit p-10 w-2/6 justify-between;
+}
+
+.appHead-g2 {
+  @apply flex justify-end items-center h-fit p-8 grow;
 }
 
 .nav {
@@ -16,7 +20,7 @@
 }
 
 .headSort {
-  @apply h-fit w-fit flex items-center justify-center;
+  @apply h-fit w-fit flex items-center justify-center text-2xl text-black;
 }
 
 .headSortIcon {
@@ -24,7 +28,15 @@
 }
 
 .headAccount {
-  @apply flex items-center justify-center h-fit w-fit;
+  @apply flex items-center justify-center h-fit w-fit ml-32;
+}
+
+.headBellIcon {
+  @apply text-2xl;
+}
+
+.headAccountName {
+  @apply ml-2 mr-6 text-3xl;
 }
 
 .headAccountImage {

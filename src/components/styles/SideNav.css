@@ -17,11 +17,11 @@
 }
 
 .side-nav-i-home {
-  @apply h-4 w-4 m-2;
+  @apply h-6 w-6 m-2;
 }
 
 .side-nav-i-message,
 .side-nav-i-cog,
 .side-nav-i-logout {
-  @apply m-2;
+  @apply m-2 text-2xl;
 }
