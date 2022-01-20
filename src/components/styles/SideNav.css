@@ -1,0 +1,27 @@
+.side-nav {
+  @apply bg-accent h-screen w-36 flex flex-col items-center p-10 rounded-r-2xl;
+}
+
+.side-nav-g1,
+.side-nav-g2,
+.side-nav-g3 {
+  @apply w-full flex flex-col items-start text-whitesmoke;
+}
+
+.side-nav-g2 {
+  @apply grow mt-16;
+}
+
+.side-nav-i-logo {
+  @apply p-2 h-10 w-10;
+}
+
+.side-nav-i-home {
+  @apply h-4 w-4 m-2;
+}
+
+.side-nav-i-message,
+.side-nav-i-cog,
+.side-nav-i-logout {
+  @apply m-2;
+}

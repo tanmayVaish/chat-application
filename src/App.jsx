@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import Headlink from './components/Headlink';
 import ChatArea from './components/ChatArea';
+import SideNav from './components/SideNav';
 
 function App() {
   // const [chats, setChats] = useState([
@@ -40,95 +41,92 @@ function App() {
   //     image: 'https://picsum.photos/id/4/200/200',
   //     head: 'Head 4',
   //     description: 'Description 4',
-  //     time: new Date(
-  //       Date.now() - Math.floor(1000 * 60 * 60 * 2 * Math.random())
-  //     ).toJSON(),
   //     count: 0,
   //     isUnread: false,
   //   },
   // ]);
 
-  const chats = {
-    name: 'Goblin',
-    image: 'https://picsum.photos/id/4/200/200',
-    isOnline: true,
-    messages: [
-      {
-        message: 'Hi',
-        timestamp: '2022-01-19T19:16:45.278Z',
-        sentByMe: false,
-      },
-      {
-        message: 'Hello',
-        timestamp: '2022-01-19T19:16:45.278Z',
-        sentByMe: true,
-      },
-      {
-        message: 'How are you?',
-        timestamp: '2022-01-19T19:16:45.278Z',
-        sentByMe: false,
-      },
-      {
-        message: 'I am a Goblin',
-        timestamp: '2022-01-19T19:16:45.278Z',
-        sentByMe: true,
-      },
-      {
-        message: 'Hi',
-        timestamp: '2022-01-19T19:16:45.278Z',
-        sentByMe: false,
-      },
-      {
-        message: 'Hello',
-        timestamp: '2022-01-19T19:16:45.278Z',
-        sentByMe: true,
-      },
-      {
-        message: 'How are you?',
-        timestamp: '2022-01-19T19:16:45.278Z',
-        sentByMe: false,
-      },
-      {
-        message: 'I am a Goblin',
-        timestamp: '2022-01-19T19:16:45.278Z',
-        sentByMe: true,
-      },
-      {
-        message: 'Hi',
-        timestamp: '2022-01-19T19:16:45.278Z',
-        sentByMe: false,
-      },
-      {
-        message: 'Hello',
-        timestamp: '2022-01-19T19:16:45.278Z',
-        sentByMe: true,
-      },
-      {
-        message: 'How are you?',
-        timestamp: '2022-01-19T19:16:45.278Z',
-        sentByMe: false,
-      },
-      {
-        message: 'I am a Goblin',
-        timestamp: '2022-01-19T19:16:45.278Z',
-        sentByMe: true,
-      },
-    ],
-  };
+  const [chats, setChats] = useState([
+    {
+      name: 'Goblin',
+      image: 'https://picsum.photos/id/4/200/200',
+      description: 'Description 4',
+      isOnline: true,
+      time: new Date(
+        Date.now() - Math.floor(1000 * 60 * 60 * 2 * Math.random())
+      ).toJSON(),
+      count: 2,
+      isUnread: true,
+      messages: [
+        {
+          message: 'Hi',
+          timestamp: '2022-01-19T19:16:45.278Z',
+          sentByMe: false,
+        },
+        {
+          message: 'Hello',
+          timestamp: '2022-01-19T19:16:45.278Z',
+          sentByMe: true,
+        },
+        {
+          message: 'How are you?',
+          timestamp: '2022-01-19T19:16:45.278Z',
+          sentByMe: false,
+        },
+        {
+          message: 'I am a Goblin',
+          timestamp: '2022-01-19T19:16:45.278Z',
+          sentByMe: true,
+        },
+      ],
+    },
+    {
+      name: 'Ayan',
+      image: 'https://picsum.photos/id/4/200/200',
+      description: 'Description 4',
+      isOnline: true,
+      time: new Date(
+        Date.now() - Math.floor(1000 * 60 * 60 * 2 * Math.random())
+      ).toJSON(),
+      count: 0,
+      isUnread: false,
+      messages: [
+        {
+          message: 'Hi',
+          timestamp: '2022-01-19T19:16:45.278Z',
+          sentByMe: false,
+        },
+        {
+          message: 'Hello',
+          timestamp: '2022-01-19T19:16:45.278Z',
+          sentByMe: true,
+        },
+        {
+          message: 'How are you?',
+          timestamp: '2022-01-19T19:16:45.278Z',
+          sentByMe: false,
+        },
+        {
+          message: 'I am a Goblin',
+          timestamp: '2022-01-19T19:16:45.278Z',
+          sentByMe: true,
+        },
+      ],
+    },
+  ]);
 
   return (
     <div className="App">
-      <div className="nav">Messages</div>
-      <ChatArea chats={chats} />
-
+      {/* <div className="nav">Messages</div> */}
       {/* <div className="content">
         <div className="headlinks">
-          {chats.map((chat, index) => (
+          {chats.map((chat) => (
             <Headlink
-              key={index}
+              key={chat.name}
+              name={chat.name}
               image={chat.image}
-              head={chat.head}
               description={chat.description}
+              isOnline={chat.isOnline}
               time={chat.time}
               count={chat.count}
               isUnread={chat.isUnread}
@@ -136,6 +134,8 @@ function App() {
           ))}
         </div>
       </div> */}
+      {/* <ChatArea chats={chats[0]} /> */}
+      <SideNav></SideNav>
     </div>
   );
 }
